@@ -1,6 +1,7 @@
 package com.atguigu1.one;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Stack;
 
@@ -11,7 +12,7 @@ import java.util.Stack;
  */
 public class OneArrayTest {
     public static void main(String[] args) {
-        System.out.println("1、数组初始化");
+        System.out.println("\n1、数组初始化");
         // 声明
         double[] prices;
         String[] foods;
@@ -26,7 +27,7 @@ public class OneArrayTest {
         //错误2 类型不是构造函数
         //int[2] arr3 = new int[];
 
-        System.out.println("2、数组调用");
+        System.out.println("\n2、数组调用");
         //索引从0开始，到数组长度-1结束
         System.out.println(prices[0]);
         //数组元素赋值
@@ -41,11 +42,11 @@ public class OneArrayTest {
             System.out.println("数组索引越界");
         }
 
-        //3、数组长度获取
+        System.out.println("\n3、数组长度获取");
         System.out.println(foods.length);
         System.out.println(prices.length);
 
-        System.out.println("4、遍历数组");
+        System.out.println("\n4、遍历数组");
         // for i 循环
         for (int i = 0; i < foods.length; i++) {
             System.out.println(foods[i]);
@@ -55,7 +56,7 @@ public class OneArrayTest {
             System.out.println(food);
         }
 
-        System.out.println("5、数组默认的初始值");
+        System.out.println("\n5、数组默认的初始值");
         int[] ints = new int[1];
         System.out.println("整型数组默认值为" + ints[0]);
         double[] doubles = new double[1];
@@ -68,22 +69,28 @@ public class OneArrayTest {
         Object[] objects = new Object[1];
         System.out.println("引用类型数组默认值为" + objects[0]);
 
-        System.out.println("6、一维数组内存解析");
-        Stack<Map<String, String>> stack = new Stack<>();
-
-
-
+        System.out.println("\n6、一维数组内存解析");
+        storage();
     }
 
-    private void storage(Stack<Map<String, String>> stack) {
-        Map<String, String> storage = new HashMap<>();
-
+    private static void storage() {
+        System.out.println("栈中创建storage区");
         int[] arr1 = new int[4];
+        System.out.println("堆中创建int[4]，赋初始值并暴露头部虚拟指针0x12cd");
+        System.out.println("栈中创建arr1指向虚拟指针0x12cd");
         arr1[0] = 10;
+        System.out.println("0x12cd赋值10");
         arr1[1] = 20;
+        System.out.println("0x12cc赋值10");
 
         double[] arr2 = new double[2];
+        System.out.println("堆中创建double[2]，赋初始值并暴露头部虚拟指针0xaabb");
+        System.out.println("栈中创建arr2指向虚拟指针0xaabb");
         arr2[0] = 1.2;
+        System.out.println("0xaabb赋值1.2");
         arr2 = new double[3];
+        System.out.println("堆中创建double[3]，赋初始值并暴露头部虚拟指针0x12dc");
+        System.out.println("栈中arr2指向虚拟指针0x12dc");
+        System.out.println("垃圾回收器自动回收0xaabb数组，因为该指针无人使用");
     }
 }
