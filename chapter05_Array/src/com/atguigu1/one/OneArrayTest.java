@@ -74,23 +74,29 @@ public class OneArrayTest {
     }
 
     private static void storage() {
-        System.out.println("栈中创建storage区");
+        System.out.println("栈中创建storage方法区");
         int[] arr1 = new int[4];
         System.out.println("堆中创建int[4]，赋初始值并暴露头部虚拟指针0x12cd");
         System.out.println("栈中创建arr1指向虚拟指针0x12cd");
         arr1[0] = 10;
-        System.out.println("0x12cd赋值10");
+        System.out.println("arr1[0] => 0x12cd赋值10");
         arr1[1] = 20;
-        System.out.println("0x12cc赋值10");
+        System.out.println("arr1[1] => 0x12cc赋值10");
 
         double[] arr2 = new double[2];
         System.out.println("堆中创建double[2]，赋初始值并暴露头部虚拟指针0xaabb");
         System.out.println("栈中创建arr2指向虚拟指针0xaabb");
         arr2[0] = 1.2;
-        System.out.println("0xaabb赋值1.2");
+        System.out.println("arr2[0]=>0xaabb赋值1.2");
         arr2 = new double[3];
         System.out.println("堆中创建double[3]，赋初始值并暴露头部虚拟指针0x12dc");
         System.out.println("栈中arr2指向虚拟指针0x12dc");
         System.out.println("垃圾回收器自动回收0xaabb数组，因为该指针无人使用");
+        double[] arr3 = arr2;
+        System.out.println("栈中创建arr3指向虚拟指针0x12dc");
+        arr3[1] = 2.2;
+        System.out.println("令arr3[1] => 0x12dd = 2.2，则 arr2[1] => 0x12dd = " + arr2[1]);
+        System.out.println("改变arr3数组，arr2数组也会改变，因为他俩指向同一片堆空间");
+
     }
 }
