@@ -19,6 +19,7 @@
     * `com.atguigu4.search_sort.exer1` 数组元素添加(扩容)与删除
     * `com.atguigu4.search_sort.exer2` 数组元素查找
     * `com.atguigu4.search_sort.exer3` 数组元素排序(冒泡和快速排序)
+* `com.atguigu5.arrays` 数组工具类
 
 ## 二、数组元素类型
 
@@ -96,4 +97,35 @@
 数组工具类  
 `java.util.Arrays`  
 官网介绍  
-`This class contains various methods for manipulating arrays (such as sorting and searching). This class also contains a static factory that allows arrays to be viewed as lists.`  
+`This class contains various methods for manipulating arrays (such as sorting and searching). This class also contains a static factory that allows arrays to be viewed as lists.`
+
+* `Arrays.equals(arr1, arr2)`  
+  两数组每位依次相等返回true
+* `Arrays.toString(arr)`  
+  将数组转为可读的字符串
+* `Arrays.fill(arr, 5)`  
+  填充整个数组
+* `Arrays.binarySearch(arr, 5)`  
+  有序数组二分查找，未找到返回负数
+
+## 十、常见异常
+
+* `Array IndexOut0fBoundsException`  
+  数组索引越界异常
+* `NullPointerException`  
+  空指针异常
+
+## 十一、企业真题
+
+* 数组有没有length()方法？String有没有length()方法？  
+  `数组只有length字段，没有length()方法  
+  String有length()方法`
+* 2.有数组int[] arr，用Java代码将数组元素顺序颠倒  
+  `com.atguigu3.common_algorithm.exer5数组反转`
+* 3.为什么数组要从o开始编号，而不是1  
+  `索引表示了数组元素距离首地址的偏离量
+  由于第一个元素的地址与首地址一致，故偏移量为0`
+* 4.数组有什么排序的方式，手写一下  
+  `com.atguigu4.search_sort.exer3 冒泡和快速排序`
+* 5.怎么求数组的最大子序列和  
+  [一文看懂《最大子序列和问题》](https://leetcode.cn/circle/article/jV9WBW/)
