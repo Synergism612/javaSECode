@@ -11,6 +11,22 @@ public class Employee {
     int age; //年龄
     double salary; //薪资
 
+
+    public void eat() {
+        System.out.println("吃饭");
+    }
+
+    public void sleep(int hour) {
+        System.out.println("睡" + hour + "个小时");
+    }
+
+    public String interests(String hobby) {
+        String info = "我的爱好是：" + hobby;
+        System.out.println(info);
+        return info;
+    }
+
+
     public void show() {
         System.out.println(this);
     }

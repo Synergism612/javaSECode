@@ -9,11 +9,14 @@ package com.atguigu03.field_method.method.exer1;
  */
 public class ArrayExercise {
     public static void main(String[] args) {
-        Employee emp1 = new Employee();
-        emp1.id = 1001;
-        emp1.name = "Tome";
-        emp1.age = 24;
-        emp1.salary = 7800;
-        emp1.show();
+        Employee p1 = new Employee();
+        p1.id = 1001;
+        p1.name = "Tome";
+        p1.age = 24;
+        p1.salary = 7800;
+        p1.eat();
+        p1.sleep(8);
+        p1.interests("编程");
+        p1.show();
     }
 }
