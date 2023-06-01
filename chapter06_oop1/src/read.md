@@ -1,10 +1,16 @@
-# 面向对象重点
+# 面向对象基础重点
 
 ## 一、包目录
 
 * `com.atguigu01.oop`类与对象基本学习
 * `com.atguigu02.memory`类与对象内存解析
 * `com.atguigu03.field_method`类与对象的变量与方法
+* `com.atguigu03.objarr`对象数组学习
+* `com.atguigu03.method_more`方法更多
+* `com.atguigu03.package_import`包与引用
+* `com.atguigu03.encapsulation`封装性
+* `com.atguigu03.constructor`构造器
+* `com.atguigu03.bean_uml`java bean
 
 ## 二、类与对象
 
