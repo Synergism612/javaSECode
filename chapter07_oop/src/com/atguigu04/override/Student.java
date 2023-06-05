@@ -7,7 +7,6 @@ public class Student extends Person {
     @Override
     public void eat() {
         System.out.print("学生吃饭---");
-        super.eat();
     }
 
     @Override
