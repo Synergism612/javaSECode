@@ -6,9 +6,9 @@
 * `com.atguigu02.project`用户管理系统
 * `com.atguigu03._extends`继承
 * `com.atguigu04.override`重写
-* `com.atguigu04._super`super关键字
 * `com.atguigu05._super`super关键字
 * `com.atguigu06.polymorphism`多态性
+* `com.atguigu07.object`Object类
 
 ## 二、重点
 
@@ -53,3 +53,10 @@
 * 适用于方法，减少代码冗余
 * 不适用属性，无法直接调用子类特有的属性与函数
 * 向上转型(多态)向下转型(强制)
+
+### 6、Object类
+
+* 专指`java.lang.Object`类
+* 该类是所有其他类(包括数组)的根父类
+* Object结构上只有一个空参构造器，没有声明属性
+* 该类中有多个函数，每个函数都是精髓
